@@ -1,0 +1,17 @@
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace BookMyShow.Models
+{
+    public class ShowMovieModel
+    {
+        public string Time { get; set; }
+
+        [ForeignKeyAttribute("Theatre")]
+        public int TheatreId { get; set; }
+
+        [ForeignKeyAttribute("Movie")]
+        public int MovieId { get; set; }
+
+        public string Name { get; set; }
+    }
+}
